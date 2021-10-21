@@ -1,0 +1,11 @@
+MAL_umajf_category = {
+    #allowed = {
+    #   original_tag = MAL
+    #}
+    
+    visible_when_empty = yes
+
+    priority = {
+        base = 5
+    }
+}

@@ -1,0 +1,63 @@
+l_english:
+
+MAL_umajf_category:0 "Management of the Front"
+MAL_umajf_category_desc:0 "The UMAJF or the Front, is fighting for its life. Within it, so does a battle rage on who will ultimately reign supreme in Front’s leadership.\n\nCurrently, the Front’s discontent is [GetFrontDiscontent].\n\nThe Establishment’s influence within the party is [GetPartyInf].\n\nThe Left Wing Opposition’s influence within the party is [GetLeftInf].\n\nThe Right Wing Opposition’s influence within the party is [GetRightInf]."
+
+MAL_umajf_mobilize_manpower:0 "Mobilize the Militias"
+MAL_umajf_mobilize_manpower_desc:0 "Troops go brrrrrrr"
+
+MAL_umajf_emphasize_arms_production:0 "Drive the Armament Production"
+MAL_umajf_emphasize_arms_production_desc:0 "Guns go brrrrrrr"
+
+MAL_umajf_nationalize_taiping_industries:0 "Nationalise the Taiping Arsenal"
+MAL_umajf_nationalize_taiping_industries_desc:0 "Siezing the Taiping Arsenal shall enpower the Front."
+
+MAL_umajf_work_with_bb:0 "Work with the Industralists"
+MAL_umajf_work_with_bb_desc:0 "We can work with these men, for guns are better than political statements."
+
+MAL_umajf_concessions_decision:0 "The UMAJF Meetings"
+MAL_umajf_concessions_decision_desc:0 "The Great Debate is raging in the front. Let's settle it slowly."
+
+MAL_timeout_party_decision:0 "The Front's ideology"
+MAL_timeout_party_decision_desc:0 "Who Runs the Front?"
+
+MAL_umajf_high_value:0 "§GHigh§!"
+MAL_umajf_moderate_value:0 "§OMeddling§!"
+MAL_umajf_low_value:0 "§RLow§!"
+
+MAL_umajf_terrible:0 "§RSignificant§!"
+MAL_umajf_not_so_terrible:0 "§OMounting§!"
+MAL_umajf_good:0 "§GNegligible§!"
+
+UMAJF.0.t:0 "Conscripting an Army"
+UMAJF.0.d:0 "We're no strangers to love\n\nYou know the rules and so do I"
+UMAJF.0.a:0 " "What if I don't want to serve..." "
+
+UMAJF.2.t:0 "Building an Army"
+UMAJF.2.d:0 "A full commitment's what I'm thinking of\n\nYou wouldn't get this from any other guy"
+UMAJF.2.a:0 " "Hoes to Guns." "
+
+UMAJF.5.t:0 "Who runs the Front?"
+UMAJF.5.d:0 "Yeah, who runs the Front? Please tell me. I really want to know."
+UMAJF.5.a:0 "Probably the Commies."
+UMAJF.5.d:0 "Probably the Fascists."
+
+UMAJF.6.t:0 "It turns out, it was the commies!"
+UMAJF.6.d:0 "The East is Red."
+UMAJF.6.a:0 "Hypothetically speaking, the East does not have a colour..."
+
+UMAJF.7.t:0 "It turns out, it was the fascists!"
+UMAJF.7.d:0 "Tradition and Revolution, together."
+UMAJF.7.a:0 "Do not discuss Hyperborea in front of my girlfriend."
+
+UMAJF.10.t:0 "Communists Triumphant"
+UMAJF.10.d:0 "Commies won? WTF?"
+UMAJF.10.a:0 "A Sad Day for Democracy"
+
+UMAJF.11.t:0 "Fascists Triumphant"
+UMAJF.11.d:0 "Fash won? WTF?"
+UMAJF.11.a:0 "A Sad Day for Democracy"
+
+UMAJF.12.t:0 "Grillers Triumphant"
+UMAJF.12.d:0 "Grills won? POG"
+UMAJF.12.a:0 "Poging for steak."
