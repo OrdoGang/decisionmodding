@@ -1,0 +1,111 @@
+define_text = {
+    name = GetFrontDiscontent
+    text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_alliance_discontent > 17 }
+			}
+		}
+		localization_key = MAL_umajf_terrible
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_alliance_discontent > 7.99 }
+			}
+		}
+		localization_key = MAL_umajf_not_so_terrible
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_alliance_discontent < 8 }
+			}
+		}
+		localization_key = MAL_umajf_good
+	}
+}
+
+define_text = {
+    name = GetPartyInf
+    text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_party_influence > 17 }
+			}
+		}
+		localization_key = MAL_umajf_high_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_party_influence > 7.99 }
+			}
+		}
+		localization_key = MAL_umajf_moderate_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_party_influence < 8 }
+			}
+		}
+		localization_key = MAL_umajf_low_value
+	}
+}
+
+define_text = {
+    name = GetLeftInf
+    text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_left_opposition_influence > 17 }
+			}
+		}
+		localization_key = MAL_umajf_high_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_left_opposition_influence > 7.99 }
+			}
+		}
+		localization_key = MAL_umajf_moderate_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_left_opposition_influence < 8 }
+			}
+		}
+		localization_key = MAL_umajf_low_value
+	}
+}
+
+define_text = {
+    name = GetRightInf
+    text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_right_opposition_influence > 17 }
+			}
+		}
+		localization_key = MAL_umajf_high_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_right_opposition_influence > 7.99 }
+			}
+		}
+		localization_key = MAL_umajf_moderate_value
+	}
+	text = {
+		trigger = {
+			AND = {
+				check_variable = { MAL_umajf_right_opposition_influence < 8 }
+			}
+		}
+		localization_key = MAL_umajf_low_value
+	}
+}

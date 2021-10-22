@@ -1,0 +1,130 @@
+add_namespace = UMAJF
+
+country_event = {
+
+    id = UMAJF.0
+    title = UMAJF.0.t
+    desc = UMAJF.0.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.0.a
+    }
+}
+
+country_event = {
+
+    id = UMAJF.1
+    title = UMAJF.1.t
+    desc = UMAJF.1.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.1.a
+    }
+}
+
+country_event = {
+
+    id = UMAJF.2
+    title = UMAJF.2.t
+    desc = UMAJF.2.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.2.a
+        country_event = {
+            id = UMAJF.3
+        }
+    }
+    option = {
+        name = UMAJF.2.b
+        country_event = {
+            id = UMAJF.4
+        }
+    }
+}
+
+country_event = {
+
+    id = UMAJF.3
+    title = UMAJF.3.t
+    desc = UMAJF.3.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.3.a
+        hidden_effect = {
+            add_to_variable = { MAL_umajf_left_opposition_influence = 2 }
+        }
+    }
+}
+
+country_event = {
+
+    id = UMAJF.4
+    title = UMAJF.4.t
+    desc = UMAJF.4.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.4.a
+        hidden_effect = {
+            add_to_variable = { MAL_umajf_right_opposition_influence = 2 }
+        }
+    }
+}
+
+country_event = {
+
+    id = UMAJF.5
+    title = UMAJF.5.t
+    desc = UMAJF.5.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.5.a
+        hidden_effect = {
+            add_to_variable = { MAL_umajf_party_influence = 1.5 }
+            add_to_variable = { MAL_umajf_left_opposition_influence = 1.5 }
+        }
+    }
+}
+
+country_event = {
+
+    id = UMAJF.6
+    title = UMAJF.6.t
+    desc = UMAJF.6.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.6.a
+        hidden_effect = {
+            add_to_variable = { MAL_umajf_right_opposition_influence = 3 }
+        }
+    }
+}
+
+country_event = {
+
+    id = UMAJF.7
+    title = UMAJF.7.t
+    desc = UMAJF.7.d
+
+    is_triggered_only = yes
+
+    option = {
+        name = UMAJF.7.a
+        hidden_effect = {
+            add_to_variable = { MAL_alliance_discontent = 4 }
+        }
+    }
+}

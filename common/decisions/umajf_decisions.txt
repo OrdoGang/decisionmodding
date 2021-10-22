@@ -1,0 +1,230 @@
+umajf_category = {
+    umajf_mobilize_manpower = {
+        allowed = {
+            tag = MAL
+        }
+
+        visible = {
+            always = yes
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = MAL_umajf_war_industry
+            }
+        }
+        
+        cost = 25
+        days_remove = 20
+        days_re_enable = 40
+
+        modifier = {
+            recruitable_population = 0.015
+            mobilization_speed = 0.15
+            weekly_manpower = 15000
+        }
+
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: MAL_umajf_mobilize_manpower"
+            set_country_flag = MAL_umajf_manpower_mobilized
+            add_to_variable = { MAL_alliance_discontent = 0.2 }
+			hidden_effect = {
+            country_event = { id = UMAJF.0 days = 2 }
+			}
+        }
+        
+        remove_effect = {
+            clr_country_flag = MAL_umajf_manpower_mobilized
+        }
+    }
+    umajf_emphasize_arms_production = {
+        allowed = {
+            tag = MAL
+        }
+
+        visible = {
+            always = yes
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = MAL_umajf_manpower_mobilized
+            }
+        }
+        
+        cost = 25
+        days_remove = 20
+        days_re_enable = 40
+
+        modifier = {
+            industrial_capacity_factory = 0.10
+            consumer_goods_factor = -0.25
+        }
+
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision MAL_umajf_emphasize_arms_production"
+            set_country_flag = MAL_umajf_war_industry
+            add_to_variable = { MAL_alliance_discontent = 0.3 }
+            add_to_variable = { MAL_umajf_left_opposition_influence = 0.2 }
+            add_to_variable = { MAL_umajf_right_opposition_influence = 0.4 }
+            subtract_from_variable = { MAL_umajf_party_influence = 0.2 }
+			hidden_effect = {
+            country_event = { id = UMAJF.2 days = 3 }
+			}
+        }
+
+        remove_effect = {
+            clr_country_flag = MAL_umajf_war_industry
+        }
+    }
+    umajf_nationalize_taiping_industries = {
+        allowed = {
+            tag = MAL
+        }
+
+        visible = {
+            always = yes
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = MAL_umajf_war_industry
+                has_country_flag = MAL_umajf_mobilize_manpower
+                has_country_flag = MAL_umajf_collaboration_decision
+            }
+        }
+
+        cost = 50
+        fire_only_once = yes
+
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision MAL_umajf_nationalize_taiping_industries"
+            hidden_effect = {
+            add_offsite_building = { type = arms_factory level = 2 }
+            set_country_flag = MAL_umajf_nationalisation_decision
+            add_to_variable = { MAL_alliance_discontent = 0.5 }
+            add_to_variable = { MAL_umajf_left_opposition_influence = 0.5 }
+            subtract_from_variable = { MAL_umajf_right_opposition_influence = 0.4 }
+            }
+        }
+    }
+    umajf_work_with_bb = {
+        allowed = {
+            tag = MAL
+        }
+
+        visible = {
+            always = yes
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+
+        available = {
+            NOT = {
+                has_country_flag = MAL_umajf_war_industry
+                has_country_flag = MAL_umajf_mobilize_manpower
+                has_country_flag = MAL_umajf_nationalisation_decision
+            }
+        }
+        
+        cost = 50
+        fire_only_once = yes
+
+        complete_effect = {
+            log = "[GetDateText]: [Root.GetName]: Decision MAL_umajf_work_with_bb"
+
+            hidden_effect = {
+            add_equipment_to_stockpile = { type = infantry_equipment_2 amount = 5000 }
+            set_country_flag = MAL_umajf_collaboration_decision
+            add_to_variable = { MAL_alliance_discontent = 0.25 }
+            subtract_from_variable = { MAL_umajf_left_opposition_influence = 0.25 }
+            subtract_from_variable = { MAL_umajf_party_influence = 0.25 }
+            add_to_variable = { MAL_umajf_right_opposition_influence = 0.5 }
+            }
+        }
+    }
+    umajf_concessions_decision = {
+        allowed = {
+            tag = MAL
+        }
+
+        visible = {
+            always = yes
+        }
+
+        ai_will_do = {
+            factor = 5
+        }
+        
+        cost = 150
+        days_remove = 10
+        days_re_enable = 20
+
+        complete_effect = {
+            set_variable = { MAL_alliance_discontent = 0 }
+            hidden_effect = {
+                country_event = { id = UMAJF.5 days = 1 }
+            }
+        }
+    }
+    umajf_timeout_party_decision = {
+	
+		allowed = {
+			tag = MAL
+		}
+
+        visible = {
+            always = yes
+        }
+
+        days_mission_timeout = 65
+        fire_only_once = yes
+
+        timeout_effect = {
+            log = "[GetDateText]: [Root.GetName]: MAL_timeout_party_decision"
+            hidden_effect = {
+                if = {
+                    limit = {
+                        check_variable { MAL_umajf_left_opposition_influence > MAL_umajf_right_opposition_influence }
+                    }
+                    AND = {
+                        check_variable { MAL_umajf_party_influence > MAL_umajf_right_opposition_influence }
+                    }
+                    country_event = {
+                        id = UMAJF.5
+                        days = 3
+                    }
+                }
+                else_if = {
+					limit = {
+						check_variable = { MAL_umajf_left_opposition_influence < MAL_umajf_right_opposition_influence }
+					}
+					country_event = {
+						id = UMAJF.6
+						days = 3
+					}
+				}
+                else = {
+					country_event = {
+						id = UMAJF.7
+						days = 3
+				    }
+                }
+            }
+        }
+    }
+}
