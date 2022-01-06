@@ -1,1 +1,1 @@
-# hi, this is OrdoGang's TNO Contrib Application
+# hi, this is OrdoGang's Contrib Application
